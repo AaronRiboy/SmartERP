@@ -1,0 +1,105 @@
+{
+  "RootNamespace": "SmartERP",
+  "ServerTypings": {
+    "LocalTexts": true
+  },
+  "Restore": {
+    "Exclude": [
+      "/wwwroot/Scripts/serenity/Serenity.CoreLib*.*"
+    ]
+  },
+  "Connections": [
+    {
+      "Key": "Default",
+      "Tables": [
+        {
+          "Tablename": "dbo.Navigations",
+          "Identifier": "NavigationList",
+          "Module": "Administration",
+          "PermissionKey": "Administration:General"
+        }
+      ]
+    },
+    {
+      "Key": "SmartLicenseDB",
+      "Tables": [
+        {
+          "Tablename": "dbo.AcBusinessNature",
+          "Identifier": "BusinessNature",
+          "Module": "BusinessNatureDB",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.AcBusinessNatureGrp",
+          "Identifier": "BusinessNatureGrp",
+          "Module": "BusnessNatureGrpDB",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.AcCompanyGroup",
+          "Identifier": "CompanyGroup",
+          "Module": "CompanyGroupDB",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.AcCountry",
+          "Identifier": "Country",
+          "Module": "CountryDB",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.AcCustomerStatus",
+          "Identifier": "CustomerStatus",
+          "Module": "CustomerStatusDB",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.AcDealer",
+          "Identifier": "Dealer",
+          "Module": "DealerDB",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.AcLeadSource",
+          "Identifier": "LeadSource",
+          "Module": "LeadSourceDB",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.AcLeadStatus",
+          "Identifier": "LeadStatus",
+          "Module": "LeadStatusDB",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.AcLicenseInfo",
+          "Identifier": "LicenseInfo",
+          "Module": "LicenseInfoDB",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.AcSalesPerson",
+          "Identifier": "SalesPerson",
+          "Module": "SalesPersonDB",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.AcUser",
+          "Identifier": "User",
+          "Module": "UserDB",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.AcUserGroup",
+          "Identifier": "UserGroup",
+          "Module": "UserGroupDB",
+          "PermissionKey": "Administration:General"
+        }
+      ]
+    }
+  ],
+  "UpgradeInfo": {
+    "InitialType": "Community",
+    "InitialVersion": "5.0.49.2"
+  }
+}
