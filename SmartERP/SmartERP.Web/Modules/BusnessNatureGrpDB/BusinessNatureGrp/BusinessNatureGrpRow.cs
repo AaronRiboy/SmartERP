@@ -9,7 +9,7 @@ using System.IO;
 namespace SmartERP.BusnessNatureGrpDB
 {
     [ConnectionKey("SmartLicenseDB"), Module("BusnessNatureGrpDB"), TableName("[dbo].[AcBusinessNatureGrp]")]
-    [DisplayName("Business Nature Grp"), InstanceName("Business Nature Grp")]
+    [DisplayName("Business Nature Group"), InstanceName("Business Nature Grp")]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
     public sealed class BusinessNatureGrpRow : Row<BusinessNatureGrpRow.RowFields>, IIdRow, INameRow
@@ -21,7 +21,7 @@ namespace SmartERP.BusnessNatureGrpDB
             set => fields.AcBusinessNatureGrpId[this] = value;
         }
 
-        [DisplayName("Ac Business Nature Grp Desc"), Size(100), NotNull]
+        [DisplayName("Business Nature Group Description"), Size(100), NotNull]
         public String AcBusinessNatureGrpDesc
         {
             get => fields.AcBusinessNatureGrpDesc[this];

@@ -14,21 +14,28 @@ namespace SmartERP.CompanyGroupDB
     [ModifyPermission("Administration:General")]
     public sealed class CompanyGroupRow : Row<CompanyGroupRow.RowFields>, IIdRow, INameRow
     {
-        [DisplayName("Ac Company Group Id"), Column("AcCompanyGroupID"), Size(100), PrimaryKey, IdProperty, QuickSearch, NameProperty]
+        [DisplayName("Ac Company Group Id"), Column("AcCompanyGroupID"), Size(100), QuickSearch, NameProperty]
         public String AcCompanyGroupId
         {
             get => fields.AcCompanyGroupId[this];
             set => fields.AcCompanyGroupId[this] = value;
         }
 
-        [DisplayName("Ac Company Group Desc"), Size(100), NotNull]
+        [DisplayName("Company Group Description"), Size(100), NotNull]
         public String AcCompanyGroupDesc
         {
             get => fields.AcCompanyGroupDesc[this];
             set => fields.AcCompanyGroupDesc[this] = value;
         }
 
-        [DisplayName("Dealer Id"), Column("DealerID"), Size(50), PrimaryKey]
+        [Expression("CAST(T0.AcCompanyGroupID AS VARCHAR(20)) + CAST(T0.DealerId AS VARCHAR(20))"), IdProperty]
+        public String PropertyId
+        {
+            get => fields.DealerId[this];
+            set => fields.DealerId[this] = value;
+        }
+
+        [DisplayName("Dealer Id"), Column("DealerID"), Size(50)]
         public String DealerId
         {
             get => fields.DealerId[this];
@@ -161,21 +168,21 @@ namespace SmartERP.CompanyGroupDB
             set => fields.IntegrationTo[this] = value;
         }
 
-        [DisplayName("Ac Business Nature Id"), Size(100)]
+        [DisplayName("Business Nature Id"), Size(100)]
         public String AcBusinessNatureId
         {
             get => fields.AcBusinessNatureId[this];
             set => fields.AcBusinessNatureId[this] = value;
         }
 
-        [DisplayName("Ac Customer Status Id"), Size(20)]
+        [DisplayName("Customer Status Id"), Size(20)]
         public String AcCustomerStatusId
         {
             get => fields.AcCustomerStatusId[this];
             set => fields.AcCustomerStatusId[this] = value;
         }
 
-        [DisplayName("Masterdealer"), Column("masterdealer"), Size(20), PrimaryKey]
+        [DisplayName("Masterdealer"), Column("masterdealer"), Size(20)]
         public String Masterdealer
         {
             get => fields.Masterdealer[this];
@@ -218,6 +225,7 @@ namespace SmartERP.CompanyGroupDB
             public StringField AcBusinessNatureId;
             public StringField AcCustomerStatusId;
             public StringField Masterdealer;
+            public StringField PropertyId;
         }
     }
 }

@@ -1,10 +1,8 @@
-﻿using Serenity;
-using Serenity.ComponentModel;
+﻿using Serenity.ComponentModel;
 using Serenity.Data;
 using Serenity.Data.Mapping;
 using System;
 using System.ComponentModel;
-using System.IO;
 
 namespace SmartERP.DealerDB
 {
@@ -14,15 +12,22 @@ namespace SmartERP.DealerDB
     [ModifyPermission("Administration:General")]
     public sealed class DealerRow : Row<DealerRow.RowFields>, IIdRow, INameRow
     {
-        [DisplayName("Master Dealer"), Size(20), PrimaryKey, IdProperty, QuickSearch, NameProperty]
+        [DisplayName("Master Dealer"), Size(20), QuickSearch, NameProperty]
         public String MasterDealer
         {
             get => fields.MasterDealer[this];
             set => fields.MasterDealer[this] = value;
         }
 
-        [DisplayName("Dealer Id"), Column("DealerID"), Size(20), PrimaryKey]
+        [DisplayName("Dealer Id"), Column("DealerID"), Size(20)]
         public String DealerId
+        {
+            get => fields.DealerId[this];
+            set => fields.DealerId[this] = value;
+        }
+
+        [Expression("CAST(T0.MasterDealer AS VARCHAR(20)) + CAST(T0.DealerId AS VARCHAR(20))"), IdProperty]
+        public String PropertyId
         {
             get => fields.DealerId[this];
             set => fields.DealerId[this] = value;
@@ -186,6 +191,7 @@ namespace SmartERP.DealerDB
             public StringField CoverDocNoPreFix;
             public Int32Field CoverLastDocNo;
             public StringField IsTaxExclusive;
+            public StringField PropertyId;
         }
     }
 }

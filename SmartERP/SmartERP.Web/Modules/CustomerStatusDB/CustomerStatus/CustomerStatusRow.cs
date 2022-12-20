@@ -21,7 +21,7 @@ namespace SmartERP.CustomerStatusDB
             set => fields.AcCustomerStatusId[this] = value;
         }
 
-        [DisplayName("Ac Customer Status Desc"), Size(100), NotNull]
+        [DisplayName("Customer Status Description"), Size(100), NotNull]
         public String AcCustomerStatusDesc
         {
             get => fields.AcCustomerStatusDesc[this];

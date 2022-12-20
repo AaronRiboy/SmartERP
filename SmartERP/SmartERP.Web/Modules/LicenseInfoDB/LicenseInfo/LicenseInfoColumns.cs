@@ -14,6 +14,7 @@ namespace SmartERP.LicenseInfoDB.Columns
     {
         [EditLink]
         public String Regkey { get; set; }
+        [QuickFilter]
         public String CompanyName { get; set; }
         public String CompanyGroupId { get; set; }
         public String CompanyRoc { get; set; }

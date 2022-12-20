@@ -10,8 +10,10 @@ namespace SmartERP.CountryDB
 {
     [ConnectionKey("SmartLicenseDB"), Module("CountryDB"), TableName("[dbo].[AcCountry]")]
     [DisplayName("Country"), InstanceName("Country")]
-    [ReadPermission("Administration:General")]
-    [ModifyPermission("Administration:General")]
+    [ReadPermission(Masters.PermissionKeys.Banks.View)]
+    [InsertPermission(Masters.PermissionKeys.Banks.Create)]
+    [UpdatePermission(Masters.PermissionKeys.Banks.Update)]
+    [DeletePermission(Masters.PermissionKeys.Banks.Delete)]
     public sealed class CountryRow : Row<CountryRow.RowFields>, IIdRow, INameRow
     {
         [DisplayName("Ac Country Id"), Column("AcCountryID"), Size(20), PrimaryKey, IdProperty, QuickSearch, NameProperty]
@@ -21,7 +23,8 @@ namespace SmartERP.CountryDB
             set => fields.AcCountryId[this] = value;
         }
 
-        [DisplayName("Ac Country Desc"), Size(100), NotNull]
+        [DisplayName("Country Description"), Size(100), NotNull, QuickSearch(SearchType.StartsWith)]
+
         public String AcCountryDesc
         {
             get => fields.AcCountryDesc[this];

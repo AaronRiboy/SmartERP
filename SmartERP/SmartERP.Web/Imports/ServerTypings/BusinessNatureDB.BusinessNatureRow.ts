@@ -15,6 +15,11 @@
         export const idProperty = 'AcBusinessNatureId';
         export const nameProperty = 'AcBusinessNatureId';
         export const localTextPrefix = 'BusinessNatureDB.BusinessNature';
+        export const lookupKey = 'BusinessNatureDB.BusinessNature';
+
+        export function getLookup(): Q.Lookup<BusinessNatureRow> {
+            return Q.getLookup<BusinessNatureRow>('BusinessNatureDB.BusinessNature');
+        }
         export const deletePermission = 'Administration:General';
         export const insertPermission = 'Administration:General';
         export const readPermission = 'Administration:General';

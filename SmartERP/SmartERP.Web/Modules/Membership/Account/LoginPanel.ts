@@ -77,7 +77,7 @@
             return `
 <div class="flex-layout">
     <div style="text-align:center">
-        <img src="/Content/images/logo-login.svg" style="height:100px;"/>
+        <img src="/Content/images/New-SNR-Logo.png" style="height:100px;"/>
     </div>
     <form id="~_Form" action="">
         <div class="s-Form">

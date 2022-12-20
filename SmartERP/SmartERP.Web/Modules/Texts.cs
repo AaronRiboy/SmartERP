@@ -160,7 +160,7 @@ namespace SmartERP
             public static class Layout
             {
                 public static LocalText FooterCopyright = "Copyright (c) "+ System.DateTime.Now.Year.ToString()+".";
-                public static LocalText FooterInfo = "SmartERP";
+                public static LocalText FooterInfo = "Smart License Portal";
                 public static LocalText FooterRights = "All rights reserved.";
                 public static LocalText GeneralSettings = "General Settings";
                 public static LocalText Language = "Language";

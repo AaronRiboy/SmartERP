@@ -24,10 +24,11 @@
         AcBusinessNatureId?: string;
         AcCustomerStatusId?: string;
         Masterdealer?: string;
+        PropertyId?: string;
     }
 
     export namespace CompanyGroupRow {
-        export const idProperty = 'AcCompanyGroupId';
+        export const idProperty = 'PropertyId';
         export const nameProperty = 'AcCompanyGroupId';
         export const localTextPrefix = 'CompanyGroupDB.CompanyGroup';
         export const deletePermission = 'Administration:General';
@@ -59,7 +60,8 @@
             IntegrationTo = "IntegrationTo",
             AcBusinessNatureId = "AcBusinessNatureId",
             AcCustomerStatusId = "AcCustomerStatusId",
-            Masterdealer = "Masterdealer"
+            Masterdealer = "Masterdealer",
+            PropertyId = "PropertyId"
         }
     }
 }

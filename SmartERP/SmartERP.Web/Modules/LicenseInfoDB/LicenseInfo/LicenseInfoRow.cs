@@ -42,28 +42,28 @@ namespace SmartERP.LicenseInfoDB
             set => fields.CompanyRoc[this] = value;
         }
 
-        [DisplayName("Address1"), Size(100)]
+        [DisplayName("Address 1"), Size(100)]
         public String Address1
         {
             get => fields.Address1[this];
             set => fields.Address1[this] = value;
         }
 
-        [DisplayName("Address2"), Size(100)]
+        [DisplayName("Address 2"), Size(100)]
         public String Address2
         {
             get => fields.Address2[this];
             set => fields.Address2[this] = value;
         }
 
-        [DisplayName("Address3"), Size(100)]
+        [DisplayName("Address 3"), Size(100)]
         public String Address3
         {
             get => fields.Address3[this];
             set => fields.Address3[this] = value;
         }
 
-        [DisplayName("Address4"), Size(100)]
+        [DisplayName("Address 4"), Size(100)]
         public String Address4
         {
             get => fields.Address4[this];

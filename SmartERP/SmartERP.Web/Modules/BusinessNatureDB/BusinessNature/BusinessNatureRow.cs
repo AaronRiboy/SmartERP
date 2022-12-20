@@ -12,6 +12,7 @@ namespace SmartERP.BusinessNatureDB
     [DisplayName("Business Nature"), InstanceName("Business Nature")]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
+    [LookupScript("BusinessNatureDB.BusinessNature")]
     public sealed class BusinessNatureRow : Row<BusinessNatureRow.RowFields>, IIdRow, INameRow
     {
         [DisplayName("Ac Business Nature Id"), Column("AcBusinessNatureID"), Size(100), PrimaryKey, IdProperty, QuickSearch, NameProperty]
@@ -21,7 +22,7 @@ namespace SmartERP.BusinessNatureDB
             set => fields.AcBusinessNatureId[this] = value;
         }
 
-        [DisplayName("Ac Business Nature Desc"), Size(100), NotNull]
+        [DisplayName("Business Nature Description"), Size(100), NotNull]
         public String AcBusinessNatureDesc
         {
             get => fields.AcBusinessNatureDesc[this];
@@ -70,7 +71,7 @@ namespace SmartERP.BusinessNatureDB
             set => fields.Stamp[this] = value;
         }
 
-        [DisplayName("Ac Business Nature Grp Id"), Size(20)]
+        [DisplayName("Business Nature Grp Id"), Size(20)]
         public String AcBusinessNatureGrpId
         {
             get => fields.AcBusinessNatureGrpId[this];

@@ -18,6 +18,6 @@ namespace SmartERP.UserGroupDB.Forms
         public DateTime CreateDate { get; set; }
         public String EditBy { get; set; }
         public DateTime EditDate { get; set; }
-        public Int32 Stamp { get; set; }
+/*        public Int32 Stamp { get; set; }*/
     }
 }

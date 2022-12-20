@@ -21,7 +21,7 @@ namespace SmartERP.UserGroupDB
             set => fields.AcUserGroupId[this] = value;
         }
 
-        [DisplayName("Ac User Group Desc"), Size(100), NotNull]
+        [DisplayName("User Group Description"), Size(100), NotNull]
         public String AcUserGroupDesc
         {
             get => fields.AcUserGroupDesc[this];

@@ -21,7 +21,7 @@ namespace SmartERP.LeadStatusDB
             set => fields.AcLeadStatusId[this] = value;
         }
 
-        [DisplayName("Ac Lead Status Desc"), Size(100), NotNull]
+        [DisplayName("Lead Status Description"), Size(100), NotNull]
         public String AcLeadStatusDesc
         {
             get => fields.AcLeadStatusDesc[this];

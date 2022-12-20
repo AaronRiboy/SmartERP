@@ -28,14 +28,14 @@ namespace SmartERP.SalesPersonDB
             set => fields.DealerId[this] = value;
         }
 
-        [DisplayName("Ac Sales Person Id"), Column("AcSalesPersonID"), Size(100), PrimaryKey]
+        [DisplayName("Sales Person Id"), Column("AcSalesPersonID"), Size(100), PrimaryKey]
         public String AcSalesPersonId
         {
             get => fields.AcSalesPersonId[this];
             set => fields.AcSalesPersonId[this] = value;
         }
 
-        [DisplayName("Ac Sales Person Desc"), Size(100), NotNull]
+        [DisplayName("Sales Person Desc"), Size(100), NotNull]
         public String AcSalesPersonDesc
         {
             get => fields.AcSalesPersonDesc[this];

@@ -13,10 +13,10 @@
         export const idProperty = 'AcCountryId';
         export const nameProperty = 'AcCountryId';
         export const localTextPrefix = 'CountryDB.Country';
-        export const deletePermission = 'Administration:General';
-        export const insertPermission = 'Administration:General';
-        export const readPermission = 'Administration:General';
-        export const updatePermission = 'Administration:General';
+        export const deletePermission = 'Masters:Bank:Delete';
+        export const insertPermission = 'Masters:Bank:Create';
+        export const readPermission = 'Masters:Bank:View';
+        export const updatePermission = 'Masters:Bank:Update';
 
         export declare const enum Fields {
             AcCountryId = "AcCountryId",

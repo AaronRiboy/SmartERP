@@ -20,10 +20,11 @@
         CoverDocNoPreFix?: string;
         CoverLastDocNo?: number;
         IsTaxExclusive?: string;
+        PropertyId?: string;
     }
 
     export namespace DealerRow {
-        export const idProperty = 'MasterDealer';
+        export const idProperty = 'PropertyId';
         export const nameProperty = 'MasterDealer';
         export const localTextPrefix = 'DealerDB.Dealer';
         export const deletePermission = 'Administration:General';
@@ -51,7 +52,8 @@
             Stamp = "Stamp",
             CoverDocNoPreFix = "CoverDocNoPreFix",
             CoverLastDocNo = "CoverLastDocNo",
-            IsTaxExclusive = "IsTaxExclusive"
+            IsTaxExclusive = "IsTaxExclusive",
+            PropertyId = "PropertyId"
         }
     }
 }

@@ -8,7 +8,7 @@ using System.IO;
 
 namespace SmartERP.LeadSourceDB
 {
-    [ConnectionKey("SmartLicenseDB"), Module("LeadSourceDB"), TableName("[dbo].[AcLeadSource]")]
+       [ConnectionKey("SmartLicenseDB"), Module("LeadSourceDB"), TableName("[dbo].[AcLeadSource]")]
     [DisplayName("Lead Source"), InstanceName("Lead Source")]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
@@ -21,7 +21,7 @@ namespace SmartERP.LeadSourceDB
             set => fields.AcLeadSourceId[this] = value;
         }
 
-        [DisplayName("Ac Lead Source Desc"), Size(100), NotNull]
+        [DisplayName("Lead Source Description"), Size(100), NotNull]
         public String AcLeadSourceDesc
         {
             get => fields.AcLeadSourceDesc[this];

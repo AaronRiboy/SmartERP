@@ -42,7 +42,7 @@ namespace SmartERP.UserDB
             set => fields.AcUserGroupId[this] = value;
         }
 
-        [DisplayName("Pwd Login"), Size(100), NotNull]
+        [DisplayName("Password Login"), Size(100), NotNull]
         public String PwdLogin
         {
             get => fields.PwdLogin[this];
@@ -98,56 +98,56 @@ namespace SmartERP.UserDB
             set => fields.Stamp[this] = value;
         }
 
-        [DisplayName("Is Tax Exclusive"), Size(1)]
+        [DisplayName("Is Exclusive"), Size(1)]
         public String IsTaxExclusive
         {
             get => fields.IsTaxExclusive[this];
             set => fields.IsTaxExclusive[this] = value;
         }
 
-        [DisplayName("Ac User Group Ac User Group Desc"), Expression("jAcUserGroup.[AcUserGroupDesc]")]
+        [DisplayName("User Group / User Group Description"), Expression("jAcUserGroup.[AcUserGroupDesc]")]
         public String AcUserGroupAcUserGroupDesc
         {
             get => fields.AcUserGroupAcUserGroupDesc[this];
             set => fields.AcUserGroupAcUserGroupDesc[this] = value;
         }
 
-        [DisplayName("Ac User Group Is Smart Staff"), Expression("jAcUserGroup.[IsSmartStaff]")]
+        [DisplayName("User Group Is Smart Staff"), Expression("jAcUserGroup.[IsSmartStaff]")]
         public String AcUserGroupIsSmartStaff
         {
             get => fields.AcUserGroupIsSmartStaff[this];
             set => fields.AcUserGroupIsSmartStaff[this] = value;
         }
 
-        [DisplayName("Ac User Group Create By"), Expression("jAcUserGroup.[CreateBy]")]
+        [DisplayName("User Group Create By"), Expression("jAcUserGroup.[CreateBy]")]
         public String AcUserGroupCreateBy
         {
             get => fields.AcUserGroupCreateBy[this];
             set => fields.AcUserGroupCreateBy[this] = value;
         }
 
-        [DisplayName("Ac User Group Create Date"), Expression("jAcUserGroup.[CreateDate]")]
+        [DisplayName("User Group Create Date"), Expression("jAcUserGroup.[CreateDate]")]
         public DateTime? AcUserGroupCreateDate
         {
             get => fields.AcUserGroupCreateDate[this];
             set => fields.AcUserGroupCreateDate[this] = value;
         }
 
-        [DisplayName("Ac User Group Edit By"), Expression("jAcUserGroup.[EditBy]")]
+        [DisplayName("User Group Edit By"), Expression("jAcUserGroup.[EditBy]")]
         public String AcUserGroupEditBy
         {
             get => fields.AcUserGroupEditBy[this];
             set => fields.AcUserGroupEditBy[this] = value;
         }
 
-        [DisplayName("Ac User Group Edit Date"), Expression("jAcUserGroup.[EditDate]")]
+        [DisplayName("User Group Edit Date"), Expression("jAcUserGroup.[EditDate]")]
         public DateTime? AcUserGroupEditDate
         {
             get => fields.AcUserGroupEditDate[this];
             set => fields.AcUserGroupEditDate[this] = value;
         }
 
-        [DisplayName("Ac User Group Stamp"), Expression("jAcUserGroup.[Stamp]")]
+        [DisplayName("User Group Stamp"), Expression("jAcUserGroup.[Stamp]")]
         public Int32? AcUserGroupStamp
         {
             get => fields.AcUserGroupStamp[this];

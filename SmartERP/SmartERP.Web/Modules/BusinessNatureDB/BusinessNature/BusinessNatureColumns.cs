@@ -14,6 +14,8 @@ namespace SmartERP.BusinessNatureDB.Columns
     {
         [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
         public String AcBusinessNatureId { get; set; }
+
+        [QuickFilter]
         public String AcBusinessNatureDesc { get; set; }
         public Int32 OrderNo { get; set; }
         public String CreateBy { get; set; }
