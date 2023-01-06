@@ -1,5 +1,5 @@
-﻿
-namespace SmartERP.Accounts.Repositories
+﻿/*
+namespace SmartERP.LicenseInfoDB.Repository
 {
     using Serenity;
     using Serenity.Data;
@@ -8,7 +8,7 @@ namespace SmartERP.Accounts.Repositories
     using System.Collections.Generic;
     using System.Data;
     using System.Linq;
-    using MyRow = Entities.AccountsRow;
+    using MyRow = Entities.LicenseInfoRow;
 
   
     public class LicenseInfoRepository : BaseRepository
@@ -146,4 +146,4 @@ namespace SmartERP.Accounts.Repositories
             }
         }
     }
-}
+}*/

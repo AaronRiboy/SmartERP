@@ -17,5 +17,15 @@ namespace SmartERP.LicenseInfoDB
              : base(context)
         {
         }
+
+        protected override void ApplyFilters(SqlQuery query)
+        {
+            base.ApplyFilters(query);
+
+            // Setting CountRecords to false stops the count(*) query from running
+            query.CountRecords = false;
+        }
+
+
     }
 }

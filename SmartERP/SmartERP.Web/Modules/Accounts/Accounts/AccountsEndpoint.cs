@@ -6,7 +6,7 @@ namespace SmartERP.Accounts.Endpoints
     using Serenity.Services;
     using System.Data;
     using Microsoft.AspNetCore.Mvc;
-    using MyRepository = Repositories.AccountsRepository;
+    using MyRepository = Repositories.LicenseInfoRepository;
     using MyRow = Entities.AccountsRow;
 
     [Route("Services/Accounts/Accounts/[action]")]

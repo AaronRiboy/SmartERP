@@ -21,7 +21,7 @@ namespace SmartERP.LicenseInfoDB
             set => fields.Regkey[this] = value;
         }
 
-        [DisplayName("Company Name"), Size(100)]
+        [DisplayName("Company Name"), Size(100), LookupEditor(typeof(Lookups.LincenseInfoCompanyNameLookup), AutoComplete = true)]
         public String CompanyName
         {
             get => fields.CompanyName[this];
@@ -84,7 +84,7 @@ namespace SmartERP.LicenseInfoDB
             set => fields.Fax[this] = value;
         }
 
-        [DisplayName("Email"), Size(50)]
+        [DisplayName("Email"), Size(50),LookupEditor(typeof(Lookups.LincenseInfoEmailLookup), AutoComplete = true)]
         public String Email
         {
             get => fields.Email[this];
@@ -126,14 +126,14 @@ namespace SmartERP.LicenseInfoDB
             set => fields.CardGroup[this] = value;
         }
 
-        [DisplayName("Dealer Id"), Size(20)]
+        [DisplayName("Dealer Id"), Size(20), LookupEditor(typeof(Lookups.LincenseInfoDealerIdLookup), AutoComplete = true)]
         public String DealerId
         {
             get => fields.DealerId[this];
             set => fields.DealerId[this] = value;
         }
 
-        [DisplayName("Dealer Company"), Size(100)]
+        [DisplayName("Dealer Company"), Size(100), LookupEditor(typeof(Lookups.LincenseInfoDealerCompanyLookup), AutoComplete = true)]
         public String DealerCompany
         {
             get => fields.DealerCompany[this];
@@ -161,7 +161,7 @@ namespace SmartERP.LicenseInfoDB
             set => fields.DealerFax[this] = value;
         }
 
-        [DisplayName("Dealer Email"), Size(50)]
+        [DisplayName("Dealer Email"), Size(50), LookupEditor(typeof(Lookups.LincenseInfoDealerEmailLookup), AutoComplete = true)]
         public String DealerEmail
         {
             get => fields.DealerEmail[this];
@@ -203,7 +203,7 @@ namespace SmartERP.LicenseInfoDB
             set => fields.Productcode[this] = value;
         }
 
-        [DisplayName("Product Description"), Size(100)]
+        [DisplayName("Product Description"), Size(100), LookupEditor(typeof(Lookups.LincenseInfoProductDescriptionLookup), AutoComplete = true)]
         public String ProductDescription
         {
             get => fields.ProductDescription[this];
